@@ -1,0 +1,624 @@
+
+<!-- saved from url=(0060)file:///Users/orex/Documents/NATA%202025%20Score%20Card.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NATA 2025 Score Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+      /* background: url("/images/bg-nata.png") no-repeat center center/cover; */
+      margin: 0;
+      padding: 0;
+    }
+
+    .background-image {
+      position: fixed;
+      top: 6%;
+      left: -5%;
+      right: 2%;
+      width: 110%;
+      height: 99%;
+      z-index: -1;
+      opacity: 0.2;
+      object-fit: cover;
+    }
+
+    .header {
+      display: flex;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo {
+      width: 81%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .barcode {
+      width: 18%;
+      height: 157px;
+      object-fit: contain;
+    }
+
+    .scoreCardTitle {
+      /* text-align: center;
+      font-weight: 700;
+      font-size: 8px; */
+      font-size: 11px;
+      font-weight: bold;
+      text-align: center;
+      color: #024f63;
+      margin-bottom: 10px;
+    }
+
+
+    .table-header {
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      color: #024f63;
+      margin-bottom: 10px;
+    }
+
+
+
+
+    /* General Styles */
+    .content {
+      max-width: 100%;
+      padding: 25px;
+    }
+
+    .candidate-photo {
+      position: absolute;
+      transform: translate(-50%, -5%);
+      height: auto;
+      border: 3px solid #000;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      /* top: -9%; */
+      width: auto;
+      height: 262px;
+      display: block;
+      margin-bottom: 10px;
+      top: 4%;
+      right: -4%;
+      width: 240px;
+    }
+
+
+    .details-table,
+    .natascore-table,
+    .score-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      border: 2px solid #024f63;
+    }
+
+    .details-table {
+      width: 70%;
+      text-align: left;
+    }
+
+    .details-table td,
+    .natascore-table th,
+    .natascore-table td,
+    .score-table th,
+    .score-table td {
+      border: 1px solid #024f63;
+      padding: 10px;
+      word-wrap: break-word;
+    }
+
+    .details-table th,
+    .natascore-table th,
+    .score-table th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .score-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      table-layout: auto;
+    }
+
+    .score-table th,
+    .score-table td {
+      border: 1px solid #024f63;
+      padding: 10px;
+      word-wrap: break-word;
+    }
+
+    .score-table th {
+      background-color: #024f63;
+      color: white;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .scorecard {
+      width: 89% !important;
+      border: 2px solid #000;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      padding: 4px;
+      margin: 10px 0;
+      overflow: hidden;
+      background: none;
+
+    }
+
+    .scorecard::before {
+      content: "";
+      position: absolute;
+      top: 117px;
+      left: 66px;
+      width: 90%;
+      height: 200%;
+      background: url(/images/bg-nata2.jpg) no-repeat center center / cover;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+
+    .scorecard>* {
+      position: relative;
+      z-index: 1;
+    }
+
+    .content {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .qualified {
+      color: green;
+      font-weight: bold;
+    }
+
+    .not-qualified {
+      color: red;
+      font-weight: bold;
+    }
+
+    .notes p {
+      font-size: 14px;
+      margin: 0 0 10px;
+    }
+
+    .notes ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin: 0 0 20px;
+    }
+
+    .notes ul li {
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+
+    .signature {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: end;
+    }
+
+    .sig-image {
+      height: 40px;
+      width: 10%;
+    }
+
+    .signature p {
+      font-size: 12px;
+      margin-right: 15px;
+    }
+
+    .natascore-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 2px solid #024f63;
+      margin-bottom: 20px;
+      margin-top: 2%;
+    }
+
+    .natascore-table th,
+    .natascore-table td {
+      padding: 10px;
+      border: 1px solid #024f63;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .natascore-table th {
+      background-color: #024f63;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .finalScore {
+      background-color: #024f63;
+      color: #fff;
+      font-weight: bold;
+      border: 1px solid #fff;
+    }
+
+    .finalScore td {
+      border: 1px solid #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+      .scorecard {
+        width: 92%;
+      }
+
+      .score-table {
+        font-size: 14px;
+      }
+
+      .notescard {
+        width: 86%;
+      }
+
+      .score-table th,
+      .score-table td {
+        padding: 8px;
+      }
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+
+      .details-table,
+      .natascore-table,
+      .score-table {
+        font-size: 14px;
+        width: 100%;
+      }
+
+      .candidate-photo {
+        width: 100px;
+      }
+
+      .details-table td,
+      .natascore-table td,
+      .score-table td {
+        padding: 8px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+
+      .score-table th,
+      .score-table td {
+        padding: 5px;
+      }
+
+      .details-table,
+      .natascore-table,
+      .score-table {
+        font-size: 12px;
+      }
+
+      .candidate-photo {
+        position: absolute;
+        left: 88%;
+        transform: translate(-50%, -5%);
+        width: 69px;
+        height: 92px;
+        border: 3px solid #000;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        top: -7%;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .details-table td,
+      .natascore-table td,
+      .score-table td {
+        padding: 5px;
+      }
+
+      .notes p {
+        font-size: 11px;
+        margin: 0 0 10px;
+      }
+
+      .notes ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin: 0 0 20px;
+      }
+
+      .notes ul li {
+        font-size: 11px;
+        margin-bottom: 5px;
+      }
+
+      .header {
+        display: flex;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        margin-top: -6%;
+      }
+
+      .logo {
+        width: 87%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .barcode {
+        width: 14%;
+        height: 110px;
+        object-fit: contain;
+      }
+
+      .scorecard::before {
+        content: "";
+        position: absolute;
+        top: 19px;
+        left: 24px;
+        width: 90%;
+        height: 205%;
+        background: url(/images/bg-nata2.jpg) no-repeat center center / cover;
+        opacity: 0.2;
+        z-index: -1;
+      }
+
+      .details-table {
+        text-align: left;
+      }
+
+    }
+
+    @media screen and (max-width: 360px) {
+
+      .details-table td,
+      .natascore-table td,
+      .score-table td {
+        padding: 2px 0;
+      }
+
+      .score-table th {
+        padding: 2px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <img src="https://stureg.nata-app.online/images/bg-nata.png" alt="Background" class="background-image"> -->
+
+  <div class="container">
+    <div class="scorecard">
+      <div class="header">
+        <img class="logo" src="./NATA 2025 Score Card_files/score-card-image.png" alt="NATA Logo">
+        <img alt="QR Code" class="barcode" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFIAQAAAAAab1qeAAACG0lEQVR4nO2a7WrDMAxFzx19/1e++yHJyUoZ6SCNnDkNJSQHLAtZX7bMwevrKLjIRS5ykf+CfAAoni3LCCPA9QD4pNHvRz6A0BfCWDbCsmRtXy6XcxYy9InAoNCegWGbSp1OM6NOZBilEBL+jTxj9NuRNiBbr5LSRnI2JnO9hwLDg6IMTd6+nDT6/Uhsl8r84rdBs8zoWvLH0lYmSZafvpw0+l3JiEAjoGMBSJKQVr70JimHYcYdKtRzVGog50Sk4tbmNzPxVJVPPeScgjQK48Qq/RlL2FRYaiDnPKRDp+E3cXpQI7netpCzPRn5Z1hkZp5VasrxO3H0+5GqhocrW2I0QuR6f72ck5E2OExTud5DqZa88qV3+5/lN6VynLgypuU//1IflbPULlfav7lazlnI7M+7bLTanuk+I0Bp9eePXpt9QgVzmXKauxJplhl1IEWV7xphPuvP2kJqIecspFVFprM+Uphp9kW6yNmfVIWfaiLL7Je6qJx+lhk10GfF8/qv8OSdOqeZUYf47ljfY7ddw2ZRhaxZZtSA9HZnxZmr3Tb28p9v559ANexyFy7d57bxMcuMGuhzdwoEy9Sxm5HWr3h09PpxPqQOMA271I6cZUYt9BlXbnF4HLKxRlo/zYwakbYY8UfI5Omwj4x+C/LpfMi2wvMhW3YnjX4/suoj2CXzZDRSlqBLn4fJl0e/Pjb6Ihe5yEXOS34D0RD4i9gUCFoAAAAASUVORK5CYII=">
+      </div>
+
+      <div class="scoreCardTitle">
+        <h1>SCORE CARD</h1>
+      </div>
+
+      <div class="content">
+        <img src="./NATA 2025 Score Card_files/passportPhoto-17394389691521.jpg" alt="Candidate Photo" class="candidate-photo">
+
+        <section class="personal-details">
+          <div class="table-wrapper">
+            <table class="details-table">
+              <tbody><tr>
+                <td>NATA Application Number</td>
+                <td>
+                  254317366
+                </td>
+              </tr>
+              <tr>
+                <td>Candidate's Name</td>
+                <td>
+                  om amrut bhanushali
+                </td>
+              </tr>
+              <tr>
+                <td>Mother's Name</td>
+                <td>
+                  manjulaben amrutbhai bhanushali
+                </td>
+              </tr>
+              <tr>
+                <td>Father's Name</td>
+                <td>
+                  amrut hariram bhanushali
+                </td>
+              </tr>
+              <tr>
+                <td>Date of Birth</td>
+                <td>
+                  04/03/2006
+                </td>
+              </tr>
+              <tr>
+                <td>Category</td>
+                <td>
+                  General
+                </td>
+              </tr>
+              <tr>
+                <td>Gender</td>
+                <td>
+                  Male
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </section>
+
+        <section class="score-details">
+          <div class="table-wrapper">
+            <table class="natascore-table">
+              <tbody><tr>
+                <th>NATA 2024 Valid Score</th>
+                <th>Marks</th>
+                <th>Status</th>
+                <th>Admitted during 2024-25</th>
+              </tr>
+              <tr>
+                <td style="text-align: left;">Qualifying / Valid score</td>
+                <td>
+                  N/A
+                </td>
+                <td>
+                  N/A
+                </td>
+                <td>
+                  NA
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </section>
+
+
+        <section class="score-details">
+          <div class="table-wrapper">
+            <h2 class="table-header">NATA 2025 Marks</h2>
+            <table class="score-table">
+              <tbody><tr>
+                <th>Papers</th>
+                <th>Total Marks</th>
+                <th colspan="3">Marks Obtained</th>
+                <th>Qualifying Marks</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Attempt 1 <br>
+                  MH27-202547800
+                </td>
+                <td>Attempt 2 <br>
+                  N/A
+                </td>
+                <td>Attempt 3 <br>
+                  N/A
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td style="text-align: left;">Drawing &amp; Composition (Part-A)</td>
+                <td>80</td>
+                <td class="qualified">45                </td>
+                <td class="">N/A</td>
+                <td class="">N/A</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td style="text-align: left;">MCQ (Part-B)</td>
+                <td>120</td>
+                <td class="qualified">90</td>
+                <td class="">N/A</td>
+                <td class="">N/A</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td style="text-align: left;">Aggregate</td>
+                <td>200</td>
+                <td><span class="qualified">135</span></td>
+                <td><span class="">N/A</span></td>
+                <td><span class="">N/A</span></td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; text-align: left;">Result</td>
+                <td colspan="5"><span class="qualified">Qualified</span></td>
+              </tr>
+              <tr>
+                <td style="text-align: left;">Qualifying / Valid Score</td>
+                <td colspan="5"><span class="qualified">135 / 200</span></td>
+              </tr>
+            </tbody></table>
+          </div>
+        </section>
+
+        <section class="score-details">
+          <div class="table-wrapper">
+            <table class="natascore-table">
+              <tbody><tr class="finalScore">
+                <td style="text-align: left;">FINAL SCORE</td>
+                <td>
+                  135
+                </td>
+                <td>
+                  Qualified
+                </td>
+                <td>
+                  Valid for Academic Session(s): 2025-26 &amp; 2026-27
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </section>
+
+        <section class="notes">
+          <!-- <div class="important-info">
+          <span style="color: red;">*</span> Please see page 2 for important information.
+        </div> -->
+          <p><strong>&nbsp;Notes:</strong></p>
+          <ul>
+            <li>Since NATA 2024 score is valid for the academic session 2025-2026, a candidate with a valid NATA 2024
+              score, who appears in one or two attempts of NATA 2025, will have his/ her final score as the best of NATA
+              2024 and the one/two attempts of NATA 2025. However, the NATA 2024 score shall be treated as invalid:
+              <br>
+              i) if he/she takes all three attempts of NATA 2025.
+              <br>
+              ii) he/ she has already taken admission in any Architecture college using NATA 2024 score during the
+              academic session 2024-25.
+            </li>
+            <li>Admission authorities are required to verify the validity of the score from the website www.nata.in. The
+              scorecard can also be verified by scanning the barcode given in the scorecard.</li>
+            <li>Qualifying in the test is subject to the candidate securing the qualifying marks in both the individual
+              components and in the aggregate.</li>
+              <li>
+                This score verification copy was generated on Fri Aug 08 2025 12:21:25 .
+              </li>
+          </ul>
+          <div class="signature">
+            <img src="./NATA 2025 Score Card_files/Registratimage.png" alt="Registrar Signature" class="sig-image">
+            <p>Registrar</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96bd15c9b9d77143',t:'MTc1NDYzNTg4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" src="./NATA 2025 Score Card_files/saved_resource.html"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" src="./NATA 2025 Score Card_files/saved_resource(1).html"></iframe><script defer="" src="./NATA 2025 Score Card_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;96bd15c9b9d77143&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.7.0&quot;,&quot;token&quot;:&quot;93d794ae2a024cec93d8fd09d98f2e36&quot;}" crossorigin="anonymous"></script>
+
+
+</body></html>
